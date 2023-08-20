@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+@import './index.css';
+/*  */
+section{
+  padding: 3rem 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color:var(--primary2);
+  font-family: var(--serif);
+  font-size: 4rem;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-size: 1.25rem;
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+} 
+
+img {
+  border-radius: 1rem;
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+}
+
+button {
+  background-color: var(--primary2);
+  color: var(--hightlight2);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--hightlight2);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+#CTA {
+  background: var(--primary1);
+  color: var(--hightlight1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  position: relative;
+}
+#CTA h1 {
+  color:var(--primary2);
+  font-family: var(--serif);
+  font-size: 4rem;
+  font-weight: 500;
+}
+#CTA h3 {
+  font-size: 2.5rem;
+  font-family: var(--serif);
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+#CTA p {
+  font-size: 1.125rem;
+  font-weight: 500;
+} 
+
+/* #CTA img {
+  height: 24rem;
+  width: 24rem;
+  position: absolute;
+  right: 0;
+  bottom: -4rem;
+}
+*/
+
+label {
+  cursor: pointer;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input, select{
+  margin-top: .3rem;
+  outline: none;
+  border: solid .125rem transparent;
+  width: 100%;
+  padding: .5rem .5rem;
+  border-radius: .5rem;
+  box-shadow: 0px .5px 1px 0px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  font-weight: 500;
 }
+
+input:focus, select:focus {
+  
+border: var(--primary2) solid .125rem;
+}
+
