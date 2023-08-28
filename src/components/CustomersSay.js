@@ -1,4 +1,5 @@
 import React from 'react'
+import './CustomersSay.css'
 
 export default function CustomersSay() {
   const reviews = [{
@@ -27,17 +28,22 @@ export default function CustomersSay() {
   },
   ]
   return (
-    <section>
-      <h2>Testimonials</h2>
-      {reviews.map((review, index) => (
-        <div key={review.name + index}>
-          <img src={review.avatarUrl} alt={review.name} />
-          <p>{review.name}</p>
-          <p>{review.rating}</p>
-          <p>{review.comment}</p>
-        </div>
-      ))}
+    <section id='testimonials'>
+      <div className="container">
+        <h2>Testimonials</h2>
+        <div className="items-wrapper">
 
+          {reviews.map((review, index) => (
+            <div key={review.name + index}>
+              <img src={review.avatarUrl} alt={review.name} />
+              <p>{review.name}</p>
+              <p>{review.rating}</p>
+              <p>{review.comment}</p>
+            </div>
+          ))}
+
+        </div>
+      </div>
     </section>
   )
 }

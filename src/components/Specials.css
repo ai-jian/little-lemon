@@ -1,0 +1,71 @@
+@import '../index.css';
+
+#specials .title-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+#specials .title-wrapper h2 {
+    flex-shrink: 0;
+}
+
+#specials .title-wrapper button {
+    font-size: 1rem;
+}
+
+#specials .items-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#specials .items-wrapper div {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+#specials .items-wrapper .info{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--highlight1);
+}
+
+#specials .items-wrapper h6 {
+    font-size: 1.125rem;
+}
+#specials .items-wrapper img {
+    height:50%;
+    width: 100%;
+}
+
+ @media screen and (min-width: 768px) {
+    #specials .container{
+        /* padding: 0 2rem; */
+        margin-top: 3rem;
+    }
+    #specials .items-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+   #specials .items-wrapper div {
+        background: var(--highlight1);
+        border-radius: 1rem;
+        max-width: 32ch;
+    }
+    #specials .items-wrapper img {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    #specials .items-wrapper .info {
+        padding: 1rem;
+        position: relative;
+        height: 35ch;
+    }
+    #specials .items-wrapper .info button {
+        position: absolute;
+        bottom: 10%;
+    }
+   
+} 

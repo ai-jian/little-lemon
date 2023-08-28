@@ -31,38 +31,14 @@ const initialAvailableTimes = [
     '8:15 PM',
     '8:30 PM',
 ]
-// const initialAvailableTimes = [
-//     '11:30 AM', available: true },
-//     { time: '11:45 AM', available: true },
-//     { time: '12:00 PM', available: true },
-//     { time: '12:15 PM', available: true },
-//     { time: '12:30 PM', available: true },
-//     { time: '12:45 PM', available: true },
-//     { time: '1:00 PM', available: true },
-//     { time: '1:15 PM', available: true },
-//     { time: '1:30 PM', available: true },
-//     { time: '1:45 PM', available: true },
-
-//     { time: '5:30 PM', available: true },
-//     { time: '5:45 PM', available: true },
-//     { time: '6:00 PM', available: true },
-//     { time: '6:15 PM', available: true },
-//     { time: '6:30 PM', available: true },
-//     { time: '6:45 PM', available: true },
-//     { time: '7:00 PM', available: true },
-//     { time: '7:15 PM', available: true },
-//     { time: '7:30 PM', available: true },
-//     { time: '7:45 PM', available: true },
-//     { time: '8:00 PM', available: true },
-//     { time: '8:15 PM', available: true },
-//     { time: '8:30 PM', available: true },
-// ]
 
 
-// const availableTimesReducer = (state, action) => {
+// const timesReducer = (state, action) => {
 //     switch (action.type) {
-//         case ACTION.UPDATE_DATE:
-//             return state
+//         case "UPDATE_TIMES":
+//             // const response = fetchAPI(action.selecedDate)
+//             // return response.length !== 0 ? response : state
+//             return 
 //         default:
 //             throw new Error()
 //     }
@@ -70,12 +46,12 @@ const initialAvailableTimes = [
 
 export default function Main() {
 
-    const updateTimes = (availableTimes, date) => {
+    const updateTimes = (date) => {
 
-        return availableTimes, date
+        return date
     }
 
-    const initializeTimes = (initialAvailableTimes) => {
+    const initializeTimes = () => {
         return initialAvailableTimes
     }
 
@@ -83,7 +59,8 @@ export default function Main() {
 
     useEffect(() => {
         // console.log(availableTimes)
-        console.log(initializeTimes)
+        // console.log(fetchAPI(date))
+        // console.log(initializeTimes)
     })
     return (
         <main>
@@ -91,9 +68,7 @@ export default function Main() {
                 <Route path='/' element={<Homepage />}></Route>
                 <Route path='/booking' element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />}></Route>
             </Routes>
-            {/* {availableTimes.lunch.map((availableTimes) => {
-                return <p>{availableTimes.time}</p>
-            })} */}
+
         </main>
     )
 }

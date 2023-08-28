@@ -1,0 +1,54 @@
+@import '../index.css';
+
+#chicago .container {
+    position: relative;
+}
+
+#chicago h2{
+    color: var(--primary2);
+}
+
+#chicago p {
+    margin: 2rem 0;
+}
+
+#chicago .container img {
+    width: auto;
+    height: 30vmin;
+}
+
+#chicago img:last-child {
+    position: absolute;
+    bottom: -10%;
+    right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    #chicago .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #chicago .container h2,
+    #chicago .container h3,
+    #chicago .container p {
+        grid-column: 1;
+    }
+
+    #chicago .container div {
+        justify-self: center;
+        align-self: flex-end;
+        height: 30vh;
+    }
+
+    #chicago img:last-child {
+        bottom: 0;
+        right: 2rem;
+    }
+    #chicago .container img {
+        width: auto;
+        height: 20vmin;
+    }
+
+   
+}

@@ -29,7 +29,16 @@ export default function BookingForm({ availableTimes, dispatch }) {
     const isTimeValid = () => time !== ''
     const isOccasionValid = () => occasion !== ''
 
+    const isFormVailable = () => {
+        return isGuestsValid() && isDateValid() && isTimeValid()
+    }
+
     console.log(availableTimes)
+
+    const handleDateChange = (e) => {
+        setDate(e.target.value)
+        dispatch(e.target.value)
+    }
 
     const clearForm = () => {
         setGuests('2')
@@ -37,12 +46,6 @@ export default function BookingForm({ availableTimes, dispatch }) {
         setTime(defaultTime)
         setOccasion('')
     }
-
-    const handleDateChange = (e) => {
-        setDate(e.target.value)
-        dispatch(e.target.value)
-    }
-
     const handleSubmit = (e) => {
         e.preventDefault()
         alert("Rervation Submitted!")
@@ -126,7 +129,7 @@ export default function BookingForm({ availableTimes, dispatch }) {
             </FormField>
 
 
-            <button type='submit' >Book a Table</button>
+            <button type='submit' disabled={!isFormVailable()} >Book a Table</button>
 
         </form>
     )

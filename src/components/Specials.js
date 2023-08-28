@@ -2,6 +2,7 @@ import React from 'react'
 import salad from '../images/greek-salad.jpg'
 import bruchetta from '../images/bruchetta.jpg'
 import cake from '../images/lemon-dessert.jpg'
+import './Specials.css'
 
 export default function Specials() {
     const specials = [{
@@ -24,18 +25,26 @@ export default function Specials() {
     },
     ]
     return (
-        <section>
-            <h2>Weekly Specials!</h2>
-            <button>Online Menu</button>
-            {specials.map((special) => (
-                <div key={special.title}>
-                    <img src={special.imageUrl} alt={special.title} />
-                    <h6>{special.title}</h6>
-                    <p>${special.price}</p>
-                    <p>{special.description}</p>
-                    <button>Add to cart</button>
+        <section id='specials'>
+            <div className="container">
+                <div className="title-wrapper">
+                    <h2>Weekly Specials!</h2>
+                    <button>Online Menu</button>
                 </div>
-            ))}
+                <div className='items-wrapper'>
+                    {specials.map((special) => (
+                        <div className="item" key={special.title}>
+                            <img src={special.imageUrl} alt={special.title} />
+                            <div className='info'>
+                                <h6>{special.title}</h6>
+                                <p>${special.price}</p>
+                                <p>{special.description}</p>
+                                <button>Add to cart</button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </section>
     )
 }
